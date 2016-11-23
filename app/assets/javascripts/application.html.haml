@@ -1,0 +1,19 @@
+!!! 5
+%html(lang="en-US")
+  %head
+    %title Bed & Breakfast
+    %meta(charset="UTF-8")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    = csrf_meta_tag
+    -# 載入 Stylesheet
+    = stylesheet_link_tag "application", :media => "all", 'data-turbolinks-track' => true
+    -# 載入 Javascript
+    = javascript_include_tag "application", 'data-turbolinks-track' => true
+  %body
+    %header
+      = render 'shared/header'
+    %section.content.clearfix
+      = render 'shared/messages'
+      = yield
+    %footer
+      &copy 2015 Bed & Breakfast
